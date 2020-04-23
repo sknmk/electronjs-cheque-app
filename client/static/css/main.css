@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../font/inter/Inter-Regular.woff2") format("woff2"),
+        url("../font/inter/Inter-Regular.woff?v=3.12") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../font/inter/Inter-Bold.woff2?v=3.12") format("woff2"),
+        url("../font/inter/Inter-Bold.woff?v=3.12") format("woff");
+}
+
+
+@font-face {
+    font-family: 'MICR Encoding';
+    src: url("../font/micr/micrenc.ttf") format('truetype');
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body,
+#app {
+    background: #efefef;
+    font-family: 'Inter';
+    font-weight: 400;
+    height: 100%;
+}
+
+.bold {
+    font-family: 'Inter';
+    font-weight: 600;
+}
+
+.digital-font {
+    font-family: 'MICR Encoding', monospace;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: .8;
+}
+
+.form-control {
+    border: none;
+    background: #e1e1e1;
+    border-radius: .25rem
+}
+
+.form-control:focus,
+.form-control:active {
+    background: #e1e1e1;
+    outline: none;
+    box-shadow: none;
+}
+
+.input-group-text {
+    background: #e1e1e1;
+    border: none;
+    font-size: 24px;
+    padding: 0 .5rem;
+    color: #555;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: .2rem;
+    transition: .1s all ease-in-out;
+    z-index: 5;
+}
+
+.label-empty {
+    position: absolute;
+    top: .5rem;
+    left: 1.8rem;
+    color: #777;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.label-filled {
+    position: absolute;
+    top: -1.2rem;
+    left: 1rem;
+    font-size: 12px;
+    color: #333
+}
+
+span.exception {
+    font-size: 12px
+}
+
+.input-group.has-error {
+    box-shadow: 0 0 0 2px #dc3545;
+    border-radius: .2rem;
+}
+
+.input-group.has-error .form-control,
+.input-group.has-error .input-group-text {
+    color: #dc3545 !important;
+}
+
+.btn[class*="btn-outline-"] {
+    border-width: 2px
+}
+
+.card {
+    background: white;
+    border: none
+}
+
+.submenu {
+    position: absolute;
+    bottom: -.7rem
+}
+
+.submenu span {
+    font-size: 12px;
+    font-weight: 600;
+    padding: .2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+    transition: .15s all ease-out;
+    border: 2px solid;
+}
+
+.submenu span:hover {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .2);
+}
