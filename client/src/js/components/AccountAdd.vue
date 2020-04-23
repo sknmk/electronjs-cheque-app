@@ -83,6 +83,7 @@
 </style>
 <script>
     const { ipcRenderer } = require('electron')
+    import { mapState, mapGetters, mapActions } from "vuex";
     export default {
         data() {
             return {
@@ -93,6 +94,7 @@
             }
         },
         methods: {
+             ...mapActions(["appendNotification"]),
              saveAccount() {
                 let result = ipcRenderer.sendSync('saveAccount', this.account)
                 if (result.exceptions) {
@@ -101,6 +103,12 @@
                     this.success = true
                     this.waiting = true
                     this.reset()
+                    this.appendNotification({
+                          header: "Başarılı",
+                          message: "Yeni kişi başarılı olarak eklendi.",
+                          type: "bg-success text-white",
+                          icon: "ri-check-line",
+                    })
                     setTimeout(() => {  this.$router.push('/Accounts')  }, 1000)
 
                 }

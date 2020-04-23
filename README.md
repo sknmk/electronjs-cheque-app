@@ -4,7 +4,7 @@ SPA formatında yazılmış basit uygulama. Dashboard, input form ve girdilerin 
 ## Neler kullanıyor?
 * Electron.js
 * Node.js
-* Vue.js
+* Vue.js (Vuex, Router)
 * Babel
 * Webpack
 * SQLite 3

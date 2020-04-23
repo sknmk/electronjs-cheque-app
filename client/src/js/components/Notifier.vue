@@ -22,9 +22,10 @@
 </template>
 <style>
 .notification-container {
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
   right: 1rem;
+    z-index: 999;
 }
 .notification-item {
   padding: 1rem;

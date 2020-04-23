@@ -4,34 +4,30 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 const state = {
-  notifications: [
-    {
-      header: "Uyarı",
-      message: "Deneme yazısıdır.",
-      type: "bg-danger text-white",
-      icon: "ri-alarm-warning-line",
-    },
-  ],
+  notifications: [],
 };
 
 const getters = {
   getNotificationStore(state) {
-    return state.notifications;
+    return state.notifications
   },
 };
 
 const mutations = {
   setNotification(state, notification) {
-    state.notifications.push(notification);
+    state.notifications.push(notification)
   },
   unsetNotification(state, notificationId) {
-    state.notifications.splice(notificationId, 1);
+    state.notifications.splice(notificationId, 1)
   },
 };
 
 const actions = {
   appendNotification({ commit }, notification) {
-    commit("setNotification", notification);
+    commit("setNotification", notification)
+    setTimeout(() => {
+      commit("unsetNotification", (state.notifications.length - 1))
+    }, 4000)
   },
   deleteNotification({ commit }, notificationId) {
      commit("unsetNotification", notificationId)
