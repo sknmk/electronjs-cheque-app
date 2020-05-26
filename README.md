@@ -12,7 +12,7 @@ SPA formatında yazılmış basit uygulama. Dashboard, input form ve girdilerin 
 
 ## Çalıştırma
 
- * `npm init`  
+ * `npm install`  
  * `npm run transpile` 
  * `npm run build`  
  * `npm run start`  
