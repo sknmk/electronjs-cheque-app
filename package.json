@@ -21,7 +21,7 @@
     "electron-rebuild": "^1.10.1",
     "jquery": "^3.5.0",
     "knex": "^0.20.11",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "popper.js": "^1.16.1",
     "remixicon": "^2.3.0",
     "sqlite3": "^4.1.1",
